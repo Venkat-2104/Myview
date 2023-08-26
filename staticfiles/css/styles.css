@@ -1,0 +1,203 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+table, th, td {
+    border: 1px solid;
+  }
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color:rgb(88, 83, 83);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a button{
+    background-color: rgb(60, 189, 60);
+    color:white;
+    transition-duration: 0.4s;
+    padding: 5px 10px;
+}
+
+nav a button:hover {
+    box-shadow: 0 12px 16px 0 rgba(58, 185, 19, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.movie-review {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.movie-review img {
+    max-width: 200px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.review-content {
+    padding: 20px;
+}
+
+.review-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.review-content p {
+    margin-bottom: 8px;
+}
+
+.release-date, .director, .rating {
+    font-weight: bold;
+}
+
+.summary {
+    margin-top: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.delete_button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+  
+.delete_button:hover {background-color: red}
+  
+.delete_button:active {
+    background-color: rgb(134, 17, 17);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#update{
+    background-color: green;
+
+}
+
+#update:hover {background-color:green}
+
+#update:active {
+    background-color: green;
+}
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.submit{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+.rating {
+     height:40px;
+     width:500px;
+     padding-bottom: 20px;
+     background: white;
+}
+ .rating label {
+     float: right;
+     position: relative;
+     width: 40px;
+     height: 40px;
+     cursor: pointer;
+}
+ .rating label:not(:first-of-type) {
+     padding-right: 2px;
+}
+ .rating label:before {
+     content: "\2605";
+     font-size: 42px;
+     color: #ccc;
+     line-height: 1;
+}
+ .rating input {
+     display: none;
+}
+ .rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before, .rating:not(:checked) > label:hover ~ label:before {
+     color: #f9df4a;
+}
+  
