@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block start %}
+    <main>
+        <section>
+            <h1>Movie Review</h1>
+            <p>Share your thoughts on the movie by submitting a review below.</p>
+        </section>
+
+        <section>
+            <h2>Submit Your Review</h2>
+            <form method="post">
+                {% csrf_token %}
+                
+                <center>
+                    <img src="/media/{{movie.image}}" alt="{{movie.name}}" style="height: 250px;">
+                </center>
+
+                <label for="review">Your Review:</label>
+                <br>
+                <textarea id="review" name="_review" rows="5" required style="height: 100px; width: 500px;"></textarea>
+                <br>
+                
+                
+                <label for="rating">Select Rating:</label>
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+                    </div>  
+                <br>
+                <button class="submit" type="submit">Submit Review</button>
+                {% if messages %}
+                    <div class="alert alert-primary" role="alert">
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </form>
+        </section>
+    </main>
+      
+{% endblock %}

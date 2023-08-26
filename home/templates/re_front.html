@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block start %}
+        <center>
+            <div style="padding:10px">
+                <form>
+                    <input type="text" name="search" placeholder="Search..." style="padding: 10px; width: 200px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                    <input type="submit" value="Search" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                </form>
+            </div>
+        </center>
+        <div class="movie-review" style="background-color: darkgray; padding:20px">
+        {% for movie in movies %}
+            <div>
+                <a href="review/{{movie.id}}"><img src="/media/{{movie.image}}" alt="movie_poster" style="height: 250px;"></a>
+                <center><p style="color:aliceblue">{{movie.name}}</p></center>
+            </div>
+        {% endfor %}
+        </div>
+{% endblock %}

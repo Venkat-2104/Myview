@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block start %}
+    <main>
+        <center>
+            <div style="padding:10px">
+                <form>
+                    <input type="text" name="search" placeholder="Search..." style="padding: 10px; width: 200px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+                    <input type="submit" value="Search" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                </form>
+            </div>
+        </center>
+        {% for movie in movies %}
+        <section class="movie-review">
+            <img src="/media/{{movie.image}}" alt="Movie Title"> 
+            <div class="review-content">
+                <h2>{{movie.name}}</h2>
+                <p>Release Date: <span class="release-date">{{movie.release_date}}</span></p>
+                <p>Director: <span class="director">{{movie.director}}</span></p>
+                <p>Rating: <span class="rating">{{movie.average_rating}}</span></p>
+                <p class="summary">{{movie.summary}}</p>
+                <button href="#" class="read-more">Read more</button>
+            </div>
+        </section>
+        {% endfor %}
+    </main>
+
+{% endblock %}
